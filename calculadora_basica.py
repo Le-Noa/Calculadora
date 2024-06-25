@@ -12,7 +12,12 @@ def suma(num1, num2):
   return(res)
 
 def resta(num1, num2):
-  res = num1 - num2
+  print("1. Numero 1 - Numero 2\n2. Numero 2 - Numero 1")
+  decision = int(input("Seleccione el orden que resea realizar la operacion: "))
+  if decision == 1:
+   res = num1 - num2
+  else:
+   res = num2 - num1
   return(res)
 
 def multi(num1, num2):
@@ -20,21 +25,32 @@ def multi(num1, num2):
   return(res)
 
 def division(num1, num2):
-  if num2 == 0:
-   while num2 == 0:
-    print("No se puede dividir por 0, repitalo")
-    num2 = int(input())
-  res = num1/num2
+  print("1. Numero 1 / Numero 2\n2. Numero 2 / Numero 1")
+  decision = int(input("Ingrese el orden que desea realizar la operacion: "))
+
+  if decision == 1:
+   if num2 == 0:
+    while num2 == 0:
+     print("No se puede dividir por 0, repitalo")
+     num2 = int(input())
+   res = num1/num2
+  else:
+   if num1 == 0:
+    while num1 == 0:
+     print("No se puede dividir por 0, repitalo")
+     num1 = int(input())
+    res = num2/num1
   return(res)
 
 decision = 0
 
 while decision != 5:
- print("""Elija una de las opciones: 1. suma
-                                     2. resta
-                                     3. multiplicacion
-                                     4. division
-                                     5. salir""")
+ print("""Elija una de las opciones:
+          1. suma
+          2. resta
+          3. multiplicacion
+          4. division
+          5. salir""")
  decision = int(input())
 
  if decision == 1 or decision == 2 or decision == 3 or decision == 4:
@@ -55,6 +71,14 @@ while decision != 5:
 
  elif decision == 5:
   break
-  +
+
  else:
   print("ingrese un valor correcto.")
+
+x = int(input())
+y = int(input())
+
+x = x % y
+x = x % y
+
+print(x)
