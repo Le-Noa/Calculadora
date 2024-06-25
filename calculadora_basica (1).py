@@ -74,11 +74,3 @@ while decision != 5:
 
  else:
   print("ingrese un valor correcto.")
-
-x = int(input())
-y = int(input())
-
-x = x % y
-x = x % y
-
-print(x)
